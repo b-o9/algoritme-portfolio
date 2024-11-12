@@ -13,6 +13,7 @@ After the tree is built it uses heapify to go through the tree, it selects each 
 
 ### Time complexity:
 Build tree = O(n)
+
 Sorting tree = O(log n)
 
 
@@ -92,4 +93,5 @@ function heapify(tree):
 
 Links:
 https://www.youtube.com/watch?v=mgUiY8CVDhU
+
 https://en.wikipedia.org/wiki/Heapsort
