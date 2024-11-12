@@ -1,21 +1,24 @@
-Heapsort O(n log n)
+# Heapsort (O(n log n))
 
 Heapsort makes a tree, every node has 2 children nodes.
+```javascript
         node1
         /  \
     node2   node3
     /  \      /  \
 node4 node5 node6 node7
+```
 
 After the tree is built it uses heapify to go through the tree, it selects each node (from the end to the front) and compares them to the parent. This means the biggest number will always be at start, we can then swap it with the last element and remove it. Since we keep removing the biggest number it sorts the list.
 
-Time complexity:
+### Time complexity:
 Build tree = O(n)
 Sorting tree = O(log n)
 
 
 
-Initial pseudo code:
+### Initial Pseudo Code:
+```javascript
 function heapSort(list) {
     tree = {[list[0],parent: 0]}
     missingChild = [[id: 0,children: 0]]
@@ -40,10 +43,13 @@ function heapify(tree) {
             tree[x.parent].id, x.id = x.id,tree[x.parent].id
         }
 }
+```
 
 
 
 End pseudo code:
+```javascript
+
 function heapSort(list):
     tree = list[0] as root node with id 0, value from list[0], no parent, empty children list
     missingChild = list containing a single entry with id 0 and children count 0
@@ -82,7 +88,7 @@ function heapify(tree):
         if tree[x].parent is not null and tree[tree[x].parent].value < tree[x].value:
             swap the value of the parent node and current node (tree[x].value and tree[tree[x].parent].value)
             swap the id of the parent node and current node (tree[x].id and tree[tree[x].parent].id)
-
+```
 
 Links:
 https://www.youtube.com/watch?v=mgUiY8CVDhU
